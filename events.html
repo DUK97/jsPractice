@@ -1,0 +1,40 @@
+<body>
+  <button id="btn-msg" data-text="Custom" message”>Show message</button>
+  <button id="btn-generate">Generate item</button>
+  <p><strong id="tag">Tag:</strong></p>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+  <script>
+    const btnMsg = document.querySelector("#btn-msg");
+    const idTag = document.querySelector("#tag");
+    const btnGenerage = document.querySelector("#btn-generate");
+    const ulList = document.querySelector("ul");
+
+    const span = document.createElement("span");
+
+    btnMsg.addEventListener("click", (e) => {
+      const message = e.target.dataset.text;
+      alert(message);
+    });
+
+    btnMsg.addEventListener("mouseover", (e) => {
+      btnMsg.style.color = "red";
+    });
+
+    addEventListener("click", (e) => {
+      const target = e.target;
+      const targetTag = target.tagName;
+      span.innerHTML = ` ${targetTag}`.toLocaleLowerCase();
+      idTag.appendChild(span);
+    });
+
+    btnGenerage.addEventListener("click", (e) => {
+      const newLi = document.createElement("li");
+      const liCount = ulList.childElementCount;
+      const liText = (newLi.innerHTML = `Item ${liCount + 1}`);
+      ulList.insertAdjacentElement("beforeend", newLi);
+    });
+  </script>
+</body>

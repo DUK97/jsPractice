@@ -1,16 +1,11 @@
-const price = {
-  price: 10,
-  discount: '15%',
-  getPrice: function () {
-    const itemPrice = this.price;
-    return itemPrice;
-  },
-  getPriceWithDiscount: function () {
-    const percent = (100 - parseInt(this.discount))/100;
-    const priceWithDiscont = percent * this.price; 
-    return priceWithDiscont;
-  }
-};
+const allUl = document.querySelectorAll(".dropdown-item");
+const firstMenu = allUl;
+const menuItem = document.querySelector(".menu").querySelectorAll("li")[3];
 
-console.log(price.getPrice());
-console.log(price.getPriceWithDiscount());
+allUl.forEach((ul) => {
+  ul.setAttribute("class", "d-none");
+});
+
+menuItem.addEventListener("mouseenter", (e) => {
+  e.stopPropagation;
+});
