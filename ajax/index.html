@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <title>Learning AJAX</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <button class="btn btn-primary">create users list</button>
+    </div>
+    <div class="d-inline-flex w-75">
+      <div class="container ml-0 mr-0 mt-2">
+        <div class="userContainer"></div>
+      </div>
+      <div class="container d-flex ml-0 mt-2 userInfoContainer"></div>
+      <div class="container d-flex ml-0 mt-2 justify-content-center">
+        <form>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="username">username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              placeholder="username"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">phone</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              placeholder="+7 777 777 77 77"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="company">company </label>
+            <input
+              type="text"
+              class="form-control"
+              id="company"
+              placeholder="website"
+              required
+            />
+            <div class="form-group">
+              <label for="city">city </label>
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                placeholder="city"
+                required
+              />
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="homework.js"></script>
+  </body>
+</html>
